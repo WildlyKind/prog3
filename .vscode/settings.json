@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "."
+    ],
+    "java.project.referencedLibraries": [
+        "Pokemon.jar",
+        "c:\\Users\\Nata\\Desktop\\lab2\\Pokemon.jar"
+    ]
+}
