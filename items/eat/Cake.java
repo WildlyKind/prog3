@@ -8,6 +8,15 @@ public class Cake extends Food {
     protected Glaze glaze;
     protected Filling filling;
 
+     public Cake(int count, boolean isBroken, boolean isMagic, boolean isSquashed, Glaze glaze, Filling filling) {
+        this.isBroken = isBroken;
+        this.isMagic = isMagic;
+        this.count = count;
+        this.isSquashed = isSquashed;
+        this.glaze = glaze;
+        this.filling = filling;
+    }
+
     public void eatBy() {}
 
     public void use() {}
