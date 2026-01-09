@@ -8,7 +8,7 @@ public class Sausages extends Food {
         super(count, name, isBroken, isMagic);
     }
 
-    public void eatBy() {}
-
-    public void use() {}
+    public void use() {
+        fresh = false;
+    }
 }

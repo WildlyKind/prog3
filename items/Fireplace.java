@@ -1,5 +1,7 @@
 package items;
 
+import home.*;
+
 public class Fireplace extends Item{
     public boolean fire;
 

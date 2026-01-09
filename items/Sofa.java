@@ -28,6 +28,7 @@ public class Sofa extends Item{
     }
 
     public double getSagPercentage() { return 0.0; }
+    
     public void checkBreak() {
         if (currentLoad > maxLoad) {
             isBroken = true;

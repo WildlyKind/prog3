@@ -14,5 +14,7 @@ public class Gun extends Item {
         System.out.println(this.name + " сломано");
     }
 
-    public void use() {}
+    public void use() {
+        loaded = false;
+    }
 }

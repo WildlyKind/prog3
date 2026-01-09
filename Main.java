@@ -70,7 +70,7 @@ public class Main {
 
         hagrid.drink(mead);
 
-        Tea tea = hagrid.cookTea(1);
+        Tea tea = hagrid.cookTea(2);
         Random rand = new Random();
         int countSausages = rand.nextInt(3) + 3;
         Sausages sausages = hagrid.cookSausages(countSausages);

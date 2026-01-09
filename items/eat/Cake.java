@@ -6,6 +6,7 @@ public class Cake extends Food {
     protected boolean isSquashed;
     protected Glaze glaze;
     protected Filling filling;
+    private final cakeSpec spec;
 
      public Cake(int count, String name, boolean isBroken, boolean isMagic, boolean isSquashed, Glaze glaze, Filling filling) {
         super(count, name, isBroken, isMagic);
@@ -15,9 +16,18 @@ public class Cake extends Food {
         this.isSquashed = isSquashed;
         this.glaze = glaze;
         this.filling = filling;
+        this.spec = new cakeSpec(glaze, filling);
     }
 
-    public void eatBy() {}
+    public void use() {
+        fresh = false;
+    }
 
-    public void use() {}
+    public Glaze getGlaze() {
+        return spec.glaze();
+    }
+
+    public Filling getFilling() {
+        return spec.filling();
+    }
 }

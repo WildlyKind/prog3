@@ -50,22 +50,32 @@ public class Person {
     }
 
     public void eat(Food food) {
-        if (health < 90) {
-            health += 10;
-        } else {
-            health = 100;
+        if (food.count > 0) {
+            if (health < 90) {
+                health += 10;
+            } else {
+                health = 100;
+            }
+            weight += 0.3;
+            mood = mood.HAPPY;
+            if (food.fresh == false) {
+                health -= 20;
+            }
         }
-        weight += 0.3;
-        mood = mood.HAPPY;
+        food.use();
     }
 
     public void drink(Drink drink) {
-        if (health < 95) {
-            health += 5;
-        } else {
-            health = 100;
+        if (drink.count > 0) {
+            if (health < 95) {
+                health += 5;
+            } else {
+                health = 100;
+            }
+            mood = mood.HAPPY;
+            weight += 0.1;
         }
-        weight += 0.1;
+        drink.use();
     }
 
     public void setMood(Mood m) {

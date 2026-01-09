@@ -7,7 +7,7 @@ public class Tea extends Drink {
         super(count, name, isBroken, isMagic);
     }
 
-    public void drinkBy() {}
-
-    public void use() {}
+    public void use() {
+        hot = false;
+    }
 }

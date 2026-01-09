@@ -1,6 +1,6 @@
 package items;
 
-public abstract class Item {
+public abstract class Item implements Usable{
     public String name;
     public boolean isBroken;
     public boolean isMagic;

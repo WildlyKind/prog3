@@ -36,6 +36,7 @@ public class Giant extends Person {
     public Sausages cookSausages(int count) {
         Sausages sausages = new Sausages(count, "Сосиска", false, false);
         sausages.hot = true;
+        sausages.fresh = true;
         return sausages;
     }
 
