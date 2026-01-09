@@ -1,7 +1,5 @@
 package home;
 
-import people.Person;
-
 public class Home {
     protected Atmosphere atmosphere;
     protected double temperature;

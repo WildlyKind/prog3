@@ -1,7 +1,5 @@
 package items;
 
-import items.eat.Food;
-
 public class Fireplace extends Item{
     public boolean fire;
 
@@ -13,7 +11,5 @@ public class Fireplace extends Item{
         fire = true;
     }
 
-    public void cookFood(Food food) {}
-    public void stew() {}
     public void use() {}
 }

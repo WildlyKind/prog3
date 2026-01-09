@@ -1,7 +1,6 @@
 package people;
 
 import java.util.ArrayList;
-import items.Item;
 import items.eat.*;
 import items.*;
 
@@ -9,11 +8,11 @@ public class Person {
     public String name;
     protected Mood mood;
     protected ArrayList<Item> items;
-    protected int weight;
+    protected double weight;
     protected int health;
     public Item inHands;
 
-    public Person(String name, Mood mood, int weight, int health) {
+    public Person(String name, Mood mood, double weight, int health) {
         this.name = name;
         this.mood = mood;
         this.weight = weight;
@@ -32,8 +31,6 @@ public class Person {
         return null;
     }
 
-    public void throwIt() {}
-
     public void handshake(Person p) {
         if (inHands == null  || p.inHands == null) {
             setMood(mood.HAPPY);
@@ -48,9 +45,28 @@ public class Person {
         sofa.currentLoad += this.weight;
     }
 
-    public void bustle() {}
-    public void eat(Food food) {}
-    public void drink(Drink drink) {}
+    public void bustle(Person person) {
+        person.setMood(mood.INTERESTING);
+    }
+
+    public void eat(Food food) {
+        if (health < 90) {
+            health += 10;
+        } else {
+            health = 100;
+        }
+        weight += 0.3;
+        mood = mood.HAPPY;
+    }
+
+    public void drink(Drink drink) {
+        if (health < 95) {
+            health += 5;
+        } else {
+            health = 100;
+        }
+        weight += 0.1;
+    }
 
     public void setMood(Mood m) {
         mood = m;

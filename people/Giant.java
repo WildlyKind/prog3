@@ -1,6 +1,7 @@
 package people;
 
 import items.*;
+import items.eat.*;
 
 public class Giant extends Person {
 
@@ -21,9 +22,21 @@ public class Giant extends Person {
         System.out.println(getName() + " завязал ружье");
         gun.breakIt();
     }
+
     public void chuckle() {
         System.out.println("Хм");
     }
-    public void cook() {}
+
+    public Tea cookTea(int count) {
+        Tea tea = new Tea(count, "Чай", false, false);
+        tea.hot = true;
+        return tea;
+    }
+
+    public Sausages cookSausages(int count) {
+        Sausages sausages = new Sausages(count, "Сосиска", false, false);
+        sausages.hot = true;
+        return sausages;
+    }
 
 }

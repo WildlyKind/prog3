@@ -1,7 +1,7 @@
 package items.eat;
 
 public class Tea extends Drink {
-    protected boolean hot;
+    public boolean hot;
 
     public Tea(int count, String name, boolean isBroken, boolean isMagic) {
         super(count, name, isBroken, isMagic);

@@ -1,5 +1,5 @@
 package people;
 
 public enum Mood {
-    HAPPY, SCARED, SURPRISE, HUNGRY
+    HAPPY, SCARED, SURPRISE, HUNGRY, INTERESTING
 }

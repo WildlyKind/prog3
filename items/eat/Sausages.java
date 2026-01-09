@@ -1,8 +1,8 @@
 package items.eat;
 
 public class Sausages extends Food {
-    protected boolean hot;
-    protected boolean burnt;
+    public boolean hot;
+    public boolean burnt;
 
     public Sausages(int count, String name, boolean isBroken, boolean isMagic) {
         super(count, name, isBroken, isMagic);

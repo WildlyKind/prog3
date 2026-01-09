@@ -1,8 +1,7 @@
 package people;
 
 import items.Fireplace;
-import home.Atmosphere;
-import home.Home;
+import home.*;
 
 public class Magic {
     public void makeFire(Fireplace fireplace, Home home) {

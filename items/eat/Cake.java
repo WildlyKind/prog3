@@ -1,7 +1,6 @@
 package items.eat;
 
-import items.eat.enums.Glaze;
-import items.eat.enums.Filling;
+import items.eat.enums.*;
 
 public class Cake extends Food {
     protected boolean isSquashed;
