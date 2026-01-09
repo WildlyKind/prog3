@@ -8,7 +8,8 @@ public class Cake extends Food {
     protected Glaze glaze;
     protected Filling filling;
 
-     public Cake(int count, boolean isBroken, boolean isMagic, boolean isSquashed, Glaze glaze, Filling filling) {
+     public Cake(int count, String name, boolean isBroken, boolean isMagic, boolean isSquashed, Glaze glaze, Filling filling) {
+        super(count, name, isBroken, isMagic);
         this.isBroken = isBroken;
         this.isMagic = isMagic;
         this.count = count;

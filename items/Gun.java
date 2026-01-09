@@ -4,16 +4,14 @@ public class Gun extends Item {
     public boolean loaded;
     public boolean isBroken = false;
 
-    public Gun(int count, boolean isBroken, boolean isMagic, boolean loaded) {
-        this.count = count;
-        this.isBroken = isBroken;
-        this.isMagic = isMagic;
-        this.loaded = loaded;
+    public Gun(int count, String name, boolean isBroken, boolean isMagic, boolean loaded) {
+        super(count, name, isBroken, isMagic);
     }
 
     public void breakIt() {
         this.isBroken = true;
-        System.out.println("Ружье сломано");
+        this.loaded = false;
+        System.out.println(this.name + " сломано");
     }
 
     public void use() {}

@@ -1,9 +1,9 @@
 package items.eat;
 
-public class Tea extends Drink {
+public class Mead extends Drink {
     protected boolean hot;
 
-    public Tea(int count, String name, boolean isBroken, boolean isMagic) {
+    public Mead(int count, String name, boolean isBroken, boolean isMagic) {
         super(count, name, isBroken, isMagic);
     }
 

@@ -18,9 +18,9 @@ public class Main {
 
         Home home = new Home(Atmosphere.STRESSFUL, 23.0);
 
-        Sofa sofa = new Sofa(1, 300, 0.3, 0, 0, 0);
+        Sofa sofa = new Sofa(1, "Диван", false, false, 300, 0.3, 0, 0);
 
-        Gun gun = new Gun(1, false, false, true);
+        Gun gun = new Gun(1, "Ружье", false, false, true);
 
         veron.getItem(gun);
         veron.inHands = gun;
@@ -30,7 +30,7 @@ public class Main {
 
         hagrid.tieInKnot();
         
-        Cake cake = new Cake(1, false, false, true, Glaze.GREEN, Filling.CHOCOLATE);
+        Cake cake = new Cake(1, "Торт", false, false, true, Glaze.GREEN, Filling.CHOCOLATE);
         hagrid.inHands = cake;
         hagrid.speak("""
             В общем, так, Гарри, первым делом с днём рождения. Я тут кой-чего припас по случаю. 
@@ -53,10 +53,16 @@ public class Main {
 
         hagrid.chuckle();
 
-        Fireplace fireplace = new Fireplace(false);
+        Fireplace fireplace = new Fireplace(1, "Камин", false, false,false);
 
         Magic magic = new Magic();
         magic.makeFire(fireplace, home);
+        harry.setMood(Mood.HAPPY);
 
+        hagrid.sitDown(sofa);
+
+        for (Item item : hagrid.magicItems) {
+            hagrid.inHands = item;
+        }
     }
 }

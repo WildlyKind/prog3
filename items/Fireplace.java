@@ -1,13 +1,12 @@
 package items;
 
-import home.Home;
 import items.eat.Food;
 
 public class Fireplace extends Item{
     public boolean fire;
 
-    public Fireplace(boolean fire) {
-        this.fire = fire;
+    public Fireplace(int count, String name, boolean isBroken, boolean isMagic, boolean fire) {
+        super(count, name, isBroken, isMagic);
     }
 
     public void ignite() {

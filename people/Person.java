@@ -2,7 +2,8 @@ package people;
 
 import java.util.ArrayList;
 import items.Item;
-import items.eat.*;;
+import items.eat.*;
+import items.*;
 
 public class Person {
     public String name;
@@ -43,7 +44,10 @@ public class Person {
         }
     }
 
-    public boolean sitDown() { return false; }
+    public void sitDown(Sofa sofa) {
+        sofa.currentLoad += this.weight;
+    }
+
     public void bustle() {}
     public void eat(Food food) {}
     public void drink(Drink drink) {}
