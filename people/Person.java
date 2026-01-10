@@ -1,6 +1,8 @@
 package people;
 
 import java.util.ArrayList;
+import java.util.Objects;
+
 import items.eat.*;
 import items.*;
 
@@ -84,5 +86,10 @@ public class Person {
 
     public Mood getCurrentMood() {
         return mood;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{ name=" + name + ", mood=" + mood + ", weight=" + weight + ", health=" + health + "}";
     }
 }

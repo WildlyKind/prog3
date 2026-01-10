@@ -24,11 +24,12 @@ public class Main {
 
         veron.getItem(gun);
         veron.inHands = gun;
+        veron.inHands = null;
         hagrid.getItem(gun);
         hagrid.inHands = gun;
         veron.inHands = null;
 
-        hagrid.tieInKnot();
+        hagrid.tieInKnot(gun);
         
         Cake cake = new Cake(1, "Торт", false, false, true, Glaze.GREEN, Filling.CHOCOLATE);
         hagrid.inHands = cake;

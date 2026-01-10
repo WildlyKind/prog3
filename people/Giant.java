@@ -10,15 +10,15 @@ public class Giant extends Person {
     Magicitem poker = new Magicitem("Кочерга", 1, false, true);
     Magicitem kettle = new Magicitem("Чайник", 1, false, true);
     Magicitem mug = new Magicitem("Щербатая кружка", 2, false, true);
+    Mead mead = new Mead(1, "Янтарно-желтая жидкость", false, false);
 
-    public Item[] magicItems = {cauldron, sausagesPack, poker, kettle, mug};
+    public Item[] magicItems = {cauldron, sausagesPack, poker, kettle, mug, mead};
 
     public Giant(String name, Mood mood, int weight, int health) {
         super(name, mood, weight, health);
     }
 
-    public void tieInKnot() {
-        Gun gun = new Gun(1,"Ружье", false, false, true);
+    public void tieInKnot(Gun gun) {
         System.out.println(getName() + " завязал ружье");
         gun.breakIt();
     }
